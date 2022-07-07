@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.carapihelloworld">
+
+    <!--
+    Car service permissions in AOSP project tree are described in:
+    packages/services/Car/service/AndroidManifest.xml
+    -->
+
+    <!-- 
+    android:protectionLevel="normal"
+    Are granted at install time if requested in the manifest(here).
+    -->
+    <!-- GEAR_SELECTION -->
+    <uses-permission android:name="android.car.permission.CAR_POWERTRAIN" />
+    <!-- FUEL_DOOR_OPEN -->
+    <uses-permission android:name="android.car.permission.CAR_ENERGY_PORTS" />
+
+    <!-- 
+    android:protectionLevel="dangerous"
+    Should be additionally requested in runtime by android.app.Activity.requestPermissions()
+    -->
+    <!-- PERF_VEHICLE_SPEED -->
+    <uses-permission android:name="android.car.permission.CAR_SPEED" />
+    <!-- EV_BATTERY_LEVEL -->
+    <uses-permission android:name="android.car.permission.CAR_ENERGY" />
+
+    <!--
+    android:protectionLevel="signature|privileged"
+    Are granted at install time if requested in the manifest (here) and the signature of your app
+    matches the signature of the app declaring the permissions.
+    -->
+    <!-- FUEL_DOOR_OPEN for setBooleanProperty() -->
+    <uses-permission android:name="android.car.permission.CONTROL_CAR_ENERGY_PORTS" />
+
+    <!-- For Vendor properties -->
+    <uses-permission android:name="android.car.permission.CAR_VENDOR_EXTENSION" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

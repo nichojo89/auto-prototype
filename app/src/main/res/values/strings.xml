@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Navistar Automotive App</string>
+    <string name="some_telemetry">Some Telemetry</string>
+    <string name="vehicle_telemetry">Vehicle Telemetry</string>
+    <string name="telemetry">Telemetry</string>
+    <string name="edvir">EDVIR</string>
+    <string name="elvis">Elvis</string>
+    <string name="expert">Expert</string>
+    <string-array name="conditions">
+        <item>Excellent</item>
+        <item>Good</item>
+        <item>Fair</item>
+        <item>Poor</item>
+        <item>Terrible</item>
+    </string-array>
+    <string name="Faults">Faults</string>
+    <string name="ShowMore">Show more</string>
+    <string name="ShowLess">Show less</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
